@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Grafik Treningów</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <h1>Grafik Treningów</h1>
+
+  <form id="booking-form">
+    <input type="text" id="client-name" placeholder="Imię klienta" required />
+    <input type="text" id="trainer-name" placeholder="Trener" required />
+    <input type="datetime-local" id="training-time" required />
+    <label for="type">Typ treningu:</label>
+    <select id="type" required>
+      <option value="personalny">Personalny</option>
+      <option value="grupowy">Grupowy</option>
+    </select>
+    <button type="submit">Dodaj rezerwację</button>
+  </form>
+
+  <div id="calendar"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Klient</th>
+        <th>Trener</th>
+        <th>Typ</th>
+        <th>Godzina</th>
+        <th>Akcje</th>
+      </tr>
+    </thead>
+    <tbody id="booking-list"></tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <script src="apps.js"></script>
+</body>
+</html>

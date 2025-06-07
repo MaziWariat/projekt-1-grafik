@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  grafik:
+    build: .
+    image: projekt1-grafik:latest
+    ports:
+      - "8080:80"
+    restart: unless-stopped
